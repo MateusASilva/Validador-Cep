@@ -1,4 +1,3 @@
-
 class Cep:
     __codigo : str
     __logradouro: str
@@ -13,10 +12,17 @@ class Cep:
         self.__cidade = cidade
         self.__uf = uf
 
-
     def dicionario(self):
         return {'codigo': self.__codigo,
                 'logradouro':self.__logradouro,
                 'bairro':self.__bairro,
                 'cidade':self.__cidade,
                 'uf':self.__uf}
+    
+    @property
+    def getCodigo(self):
+        return self.__codigo
+
+    @property
+    def getLogradouro(self):
+        return self.__logradouro
